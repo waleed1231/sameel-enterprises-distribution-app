@@ -1,0 +1,363 @@
+
+/* =========================================
+   BOOK ORDER PAGE: RESPONSIVE MOBILE FIX
+   Append at the END of OrderPage.css
+========================================= */
+
+.order-page {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.order-page *,
+.order-page *::before,
+.order-page *::after {
+  box-sizing: border-box;
+}
+
+.order-page .page-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.order-page .page-heading > div,
+.order-page .order-layout,
+.order-page .order-products,
+.order-page .cart-panel,
+.order-page .order-step,
+.order-page .order-step > div,
+.order-page .order-select-grid,
+.order-page .order-medicine-list,
+.order-page .order-medicine,
+.order-page .order-med-info,
+.order-page .cart-items,
+.order-page .cart-item {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.order-page .order-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 340px);
+  align-items: start;
+  gap: 16px;
+  width: 100%;
+}
+
+.order-page .order-products,
+.order-page .cart-panel {
+  overflow-wrap: anywhere;
+}
+
+.order-page .order-select-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  width: 100%;
+}
+
+.order-page .order-select-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.order-page .order-select-grid select,
+.order-page .medicine-search input,
+.order-page .notes-label textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.order-page .order-select-grid select {
+  height: auto;
+  min-height: 42px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.order-page .order-medicine {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px;
+}
+
+.order-page .order-med-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.order-page .order-med-info strong,
+.order-page .cart-item-top strong {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.order-page .order-med-info span,
+.order-page .order-med-info small,
+.order-page .cart-item small {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.order-page .add-button {
+  flex-shrink: 0;
+  white-space: nowrap;
+  justify-content: center;
+}
+
+.order-page .cart-item-top,
+.order-page .cart-item-bottom,
+.order-page .cart-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-width: 0;
+}
+
+.order-page .cart-item-bottom > strong,
+.order-page .cart-total > strong {
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.order-page .qty-control {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.order-page .qty-control button,
+.order-page .tiny-icon {
+  flex-shrink: 0;
+}
+
+.order-page .book-button {
+  width: 100%;
+  max-width: 100%;
+  min-height: 44px;
+  white-space: normal;
+}
+
+.order-page .alert {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .order-page .order-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .order-page .cart-panel {
+    width: 100%;
+  }
+
+  .order-page .order-medicine-list {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .order-page {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 100px;
+  }
+
+  .order-page .page-heading {
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .order-page .page-heading h1 {
+    font-size: clamp(21px, 6vw, 27px);
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+  }
+
+  .order-page .page-heading p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .order-page .order-badge {
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .order-page .order-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .order-page .order-products,
+  .order-page .cart-panel {
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  .order-page .order-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .order-page .order-step h2,
+  .order-page .cart-heading h2 {
+    font-size: 16px;
+    line-height: 1.35;
+  }
+
+  .order-page .order-step p,
+  .order-page .cart-heading p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .order-page .order-select-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .order-page .order-select-grid label {
+    width: 100%;
+  }
+
+  .order-page .order-select-grid select {
+    font-size: 14px;
+    min-height: 44px;
+  }
+
+  .order-page .medicine-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .order-page .medicine-search input {
+    flex: 1;
+    font-size: 14px;
+  }
+
+  .order-page .order-medicine {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 9px;
+    padding: 10px;
+  }
+
+  .order-page .medicine-mini {
+    width: 32px;
+    height: 32px;
+  }
+
+  .order-page .order-med-info {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .order-page .add-button {
+    grid-column: 2;
+    justify-self: start;
+    min-height: 34px;
+    padding: 6px 12px;
+    margin-top: 2px;
+  }
+
+  .order-page .cart-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .order-page .cart-item {
+    padding: 10px 0;
+  }
+
+  .order-page .cart-item-bottom {
+    flex-wrap: wrap;
+  }
+
+  .order-page .notes-label {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .order-page .notes-label textarea {
+    resize: vertical;
+    min-height: 76px;
+  }
+
+  .order-page .cart-footnote {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+}
+
+/* Very narrow phones */
+@media (max-width: 360px) {
+  .order-page {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .order-page .order-products,
+  .order-page .cart-panel {
+    padding: 10px;
+  }
+
+  .order-page .order-medicine {
+    grid-template-columns: 28px minmax(0, 1fr);
+    gap: 7px;
+    padding: 8px;
+  }
+
+  .order-page .medicine-mini {
+    width: 28px;
+    height: 28px;
+  }
+
+  .order-page .qty-control {
+    gap: 5px;
+  }
+}
+/* Center Book Order Button */
+.order-page .book-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.order-page .cart-panel .book-button {
+  align-self: center;
+}

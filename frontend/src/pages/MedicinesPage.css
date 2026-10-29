@@ -1,0 +1,162 @@
+@import url("./shared-pages.css");
+
+.medicine-heading-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.add-medicine-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 16px;
+  border: 1px solid #1674d1;
+  border-radius: 9px;
+  background: #1264b5;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-medicine-btn:hover {
+  background: #0d5298;
+}
+
+.add-medicine-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.medicine-form-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+  background: rgba(7, 18, 35, 0.72);
+}
+
+.medicine-form {
+  width: 100%;
+  max-width: 780px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  padding: 24px;
+  background: #fff;
+  color: #172b46;
+  border-radius: 16px;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.24);
+}
+
+.medicine-form-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.medicine-form-heading h2 {
+  margin: 6px 0;
+}
+
+.medicine-form-heading p {
+  margin: 0;
+  color: #66758a;
+  font-size: 14px;
+}
+
+.close-medicine-form {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #dce4ed;
+  border-radius: 8px;
+  background: #fff;
+  color: #334155;
+  cursor: pointer;
+}
+
+.medicine-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.medicine-form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #34465d;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.medicine-form-grid input,
+.medicine-form-grid select {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: 11px 12px;
+  border: 1px solid #d4deea;
+  border-radius: 8px;
+  background: #fff;
+  color: #172b46;
+  font: inherit;
+  font-weight: 400;
+  outline: none;
+}
+
+.medicine-form-grid input:focus,
+.medicine-form-grid select:focus {
+  border-color: #1674d1;
+  box-shadow: 0 0 0 3px rgba(22, 116, 209, 0.12);
+}
+
+.medicine-barcode-field {
+  grid-column: 1 / -1;
+}
+
+.medicine-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 26px;
+  padding-top: 18px;
+  border-top: 1px solid #e7edf4;
+}
+
+.cancel-medicine-btn {
+  padding: 10px 16px;
+  border: 1px solid #d4deea;
+  border-radius: 9px;
+  background: #fff;
+  color: #334155;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .medicine-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .medicine-barcode-field {
+    grid-column: auto;
+  }
+
+  .medicine-form {
+    padding: 18px;
+  }
+
+  .medicine-heading-actions {
+    justify-content: flex-start;
+  }
+}

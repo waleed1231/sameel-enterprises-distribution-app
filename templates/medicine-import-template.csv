@@ -1,0 +1,2 @@
+company,medicine_name,generic_name,strength,dosage_form,pack_size,barcode,unit_price,retail_price,opening_stock,batch_no,expiry_date
+Example Pharma,Example Tablet,Example ingredient,500 mg,Tablet,10 tablets,EX123,180,220,100,B24001,2028-06-30
